@@ -1,6 +1,40 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+    .welcome
+      header.hdr_welcome
+          button.btn Авторизоваться
+      section.welcome_sec
+        .greeting 
+          .infoContent
+            .infoContent__img
+              img(src="./assets/images/photos/man.png", alt="photo")
+            .infoContent__title Виталий Григорьев
+            .infoContent__text Личный сайт веб разработчика
+          .social
+            ul.social__list
+              li.social__item
+              a(href="https://vk.com/itrueman").social__link
+                +icon('vk', 'social__icon')
+              li.social__item
+              a(href="https://github.com/GrigorevVitaly").social__link
+                +icon('github', 'social__icon')
+              li.social__item
+              a(href="https://www.linkedin.com/in/vitaly-grigorev-2563b7164/").social__link
+                +icon('in', 'social__icon')
+          nav.menu
+            ul.menu__list
+              li.menu__item.menu__item-rds1
+                a.menu__link Мои работы 
+              li.menu__item.menu__item-border 
+                a(href="./about.pug").menu__link Обо мне
+              li.menu__item.menu__item-rds2 
+                a.menu__link Блог
+              
+
+
+
+        
+
+
+      

@@ -7,4 +7,25 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+  section.hero
+    .hero__links
+      .social
+            ul.social__list
+              li.social__item
+              a(href="https://vk.com/itrueman").social__link
+                +icon('vk', 'social__icon')
+              li.social__item
+              a(href="https://github.com/GrigorevVitaly").social__link
+                +icon('github', 'social__icon')
+              li.social__item
+              a(href="https://www.linkedin.com/in/vitaly-grigorev-2563b7164/").social__link
+                +icon('in', 'social__icon')
+    .hero__menu
+    .hero__title
+      .infoContent
+            .infoContent__img
+              img(src="./assets/images/photos/man.png", alt="photo")
+            .infoContent__title Виталий Григорьев
+            .infoContent__text Личный сайт веб разработчика
+    .hero__down_btn 
+      a(href="#").down.bnt

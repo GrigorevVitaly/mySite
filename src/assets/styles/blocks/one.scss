@@ -1,14 +1,124 @@
-.inlined-svg {
-  background: svg-load('github.svg', fill=$green) center center no-repeat;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 95% auto;
+  background: url(./assets/images/backgrounds/mountains-bg.png);
+  @include cover;
+}
+.hdr_welcome {
+  display: flex;
+  height: 70px;
+  width: 100%;
+  justify-content: flex-end;
+}
+.btn {
+  height: 45px;
+  width: 180px;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  margin:25px 20px 0 0;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   &:hover {
-    background-image: svg-load('github.svg', fill=red);
+    color: #00bfa5;
+    background: #fff;
+  }
+}
+.welcome_sec {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.greeting {
+  position: relative;
+  height: 400px;
+  width: 380px;
+  background-color: #fff;
+  border-radius: 6px;
+  opacity: .8;
+}
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__img {
+    padding-top: 40px;
+  }
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: #455a64;
+    text-align: center;
+    padding-top: 10px;
+  }
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
   }
 }
 
-.test {
-  background: $green;
+.social {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  &__item {
+    padding-left: 30px;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  &__list {
+    display: flex;
+  }
+  &__icon {
+    height: 22px;
+    width: 30px;
+    fill: #70d2c6;
+  &:hover {
+    fill: #00bfa5;
+  }
+}
+}
+.menu {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  &__item {
+    display: inline-flex;
+    width: 126.66px;
+    height: 45px;
+    background-color: #08af9d;
+    &-rds1 {
+      border-radius: 0 0 0 6px;
+    }
+    &-border {
+      border-left: 2px solid #74cac3;
+      border-right: 2px solid #74cac3;
+    }
+    &-rds2 {
+      border-radius: 0 0 6px 0;
+    }
+    &:hover {
+      background-color: #11948b; 
+    }
+  }
+  &__link {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  line-height: 44px;
+  }
 }
