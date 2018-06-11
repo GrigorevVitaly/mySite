@@ -2,34 +2,37 @@ extends ../auth.layout.pug
 
 block content
     .welcome
-      header.hdr_welcome
+      header.hdr-welcome
           button.btn Авторизоваться
-      section.welcome_sec
+      section.welcome-sec
         .greeting 
-          .infoContent
-            .infoContent__img
+          .userContent
+            .userContent__img
               img(src="./assets/images/photos/man.png", alt="photo")
-            .infoContent__title Виталий Григорьев
-            .infoContent__text Личный сайт веб разработчика
-          .social
-            ul.social__list
-              li.social__item
-              a(href="https://vk.com/itrueman").social__link
-                +icon('vk', 'social__icon')
-              li.social__item
-              a(href="https://github.com/GrigorevVitaly").social__link
-                +icon('github', 'social__icon')
-              li.social__item
-              a(href="https://www.linkedin.com/in/vitaly-grigorev-2563b7164/").social__link
-                +icon('in', 'social__icon')
+            .userContent__title Виталий Григорьев
+            .userContent__text Личный сайт веб разработчика
+          .welcome-sec__links
+            .social
+              ul.social__list
+                li.social__item
+                a(href="https://vk.com/itrueman").social__link
+                  +icon('vk', 'social__icon')
+                li.social__item
+                a(href="https://github.com/GrigorevVitaly").social__link
+                  +icon('github', 'social__icon')
+                li.social__item
+                a(href="https://www.linkedin.com/in/vitaly-grigorev-2563b7164/").social__link
+                  +icon('in', 'social__icon')
           nav.menu
             ul.menu__list
               li.menu__item.menu__item-rds1
                 a.menu__link Мои работы 
               li.menu__item.menu__item-border 
-                a(href="./about.pug").menu__link Обо мне
+                a(href="./about.html").menu__link Обо мне
               li.menu__item.menu__item-rds2 
-                a.menu__link Блог
+                a(href="./blog.html").menu__link Блог
+      footer.footer-welcome
+        h2.footer-welcome__title  &copy; Виталий Григорьев | Создано с любовью в LoftSchool | 2018
               
 
 

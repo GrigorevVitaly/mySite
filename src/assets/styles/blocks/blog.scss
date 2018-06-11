@@ -1,0 +1,42 @@
+.blog {
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+    &__nav {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    &__content {
+        width: 70%;
+    }
+}
+.nav-blog {
+    &__link {
+        display: block;
+        width: 80%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #455a64;
+        text-align: right;
+        padding-top: 30px;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+    }
+}
+.main-content {
+    &__title {
+        font-family: 'bernier';
+        font-size: 35px;
+        color: #455a64;
+        padding-top: 16px;
+    }
+    &__date {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #00bfa5;
+        padding: 30px 0 30px 0;
+    }
+}

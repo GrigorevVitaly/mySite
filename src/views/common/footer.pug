@@ -1,2 +1,28 @@
 footer.footer
-  h2.footer__title  &copy; Виталий Григорьев | Создано с любовью в LoftSchool | 2018
+  .footer__menu
+    nav.menu-foot
+      ul.menu-foot__list
+        li.menu-foot__item
+          a.menu-foot__link Мои работы 
+        li.menu-foot__item 
+          a(href="./about.html").menu-foot__link Обо мне
+        li.menu-foot__item 
+          a(href="./blog.html").menu-foot__link Блог
+        li.menu-foot__item
+          a.menu-foot__link Авторизация
+  .footer__links
+    .social-foot
+      ul.social-foot__list
+        li.social-foot__item
+          a(href="https://vk.com/itrueman").social-foot__link
+            +icon('vk_round', 'social-foot__icon')
+        li.social-foot__item
+          a(href="https://github.com/GrigorevVitaly").social-foot__link
+            +icon('github_round', 'social-foot__icon')
+        li.social-foot__item
+          a(href="https://www.linkedin.com/in/vitaly-grigorev-2563b7164/").social-foot__link
+            +icon('in_round', 'social-foot__icon')
+  .footer__info Я веб-разработчик из Минска, и этот сайт я сделал в рамках
+    br
+    | обучения в Школе онлайн образования LoftSchool. 
+  .footer__title &copy; Виталий Григорьев | Создано с любовью в LoftSchool | 2018

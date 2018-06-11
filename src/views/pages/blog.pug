@@ -1,0 +1,71 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'блог'
+
+block scripts
+  script(src='blog.bundle.js')
+
+block content
+    section.hero
+        .hero__links
+            .social
+                ul.social__list
+                    li.social__item
+                        a(href="https://vk.com/itrueman").social__link
+                            +icon('vk', 'social__icon--white')
+                    li.social__item
+                        a(href="https://github.com/GrigorevVitaly").social__link
+                            +icon('github', 'social__icon--white')
+                    li.social__item
+                        a(href="https://www.linkedin.com/in/vitaly-grigorev-2563b7164/").social__link
+                            +icon('in', 'social__icon--white')
+        .hero__menu
+            a(href="#").hamburger
+                svg.hamburger__icon
+                    use(xlink:href='assets/images/icons/sprite.svg#hamburger')
+        .hero__title
+            .userContent
+                    .userContent__img
+                        img(src="./assets/images/photos/man.png", alt="photo")
+                    .userContent__title--white Виталий Григорьев
+                    .userContent__text--white Личный сайт веб разработчика
+        .hero__down-btn 
+            a(href="#").down-btn
+                svg.down-btn__icon
+                    use(xlink:href='assets/images/icons/sprite.svg#portf_arrow_down')
+    section.blog
+        aside.blog__nav
+            nav
+                ul.nav-blog__list
+                    li.nav-blog__item
+                        a.nav-blog__link Самое важное в SASS
+                    li.nav-blog__item
+                        a.nav-blog__link Приёмы в вёрстке, без которых не обходится ни один сайт
+                    li.nav-blog__item
+                        a.nav-blog__link Самый необходимый набор Gulp плагинов
+                    li.nav-blog__item
+                        a.nav-blog__link Почему я выбрал Pug
+        .blog__content
+            .main-content
+                .main-content__item
+                    .main-content__title Самое важное в SASS
+                    .main-content__date 22 ноября 2016
+                    p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                .main-content__item
+                    .main-content__title Приёмы в вёрстке, без которых не обходится ни один сайт
+                    .main-content__date 13 ноября 2016
+                    p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                .main-content__item
+                    .main-content__title Самый необходимый набор Gulp плагинов
+                    .main-content__date 13 ноября 2016
+                    p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                
+                
+
+
+
+                
+                    
+                    
+                

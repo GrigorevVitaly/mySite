@@ -13,19 +13,104 @@ block content
             ul.social__list
               li.social__item
               a(href="https://vk.com/itrueman").social__link
-                +icon('vk', 'social__icon')
+                +icon('vk', 'social__icon--white')
               li.social__item
               a(href="https://github.com/GrigorevVitaly").social__link
-                +icon('github', 'social__icon')
+                +icon('github', 'social__icon--white')
               li.social__item
               a(href="https://www.linkedin.com/in/vitaly-grigorev-2563b7164/").social__link
-                +icon('in', 'social__icon')
+                +icon('in', 'social__icon--white')
     .hero__menu
+      a(href="#").hamburger
+        svg.hamburger__icon
+          use(xlink:href='assets/images/icons/sprite.svg#hamburger')
     .hero__title
-      .infoContent
-            .infoContent__img
+      .userContent
+            .userContent__img
               img(src="./assets/images/photos/man.png", alt="photo")
-            .infoContent__title Виталий Григорьев
-            .infoContent__text Личный сайт веб разработчика
-    .hero__down_btn 
-      a(href="#").down.bnt
+            .userContent__title--white Виталий Григорьев
+            .userContent__text--white Личный сайт веб разработчика
+    .hero__down-btn 
+      a(href="#").down-btn
+        svg.down-btn__icon
+          use(xlink:href='assets/images/icons/sprite.svg#portf_arrow_down')
+  section.about 
+    .about__left
+      .about__triangle
+            
+
+      .about__let-title
+        .about-title Обо мне
+      .about__left-content
+        .user-info
+          .user-info__img
+            img.user-info__avatar(src="assets/images/photos/aboutphoto.png", alt="user")
+          .user-info__data
+            .user-info__title
+              .block-subtitle Кто я
+            .user-info__text.text-content
+              p Я веб разработчик из Новосибирска. Мне 27 лет.
+                br 
+                |Я занимаюсь разработкой современных сайтов 
+                br 
+                |и приложений. Мне нравится делать интересные
+                br
+                | и современные проекты.
+              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём
+                br
+                | свой контент. А пока посмотрите,
+                br
+                |как тут всё классно и красиво!
+    .about__right
+      .about__triangle
+      .about__right-title
+        .block-subtitle Чем я могу быть
+          br
+          | вам полезен
+      .about__right_description.text-content
+        P Больше всего меня привлекет Frontend разработка, но я также знаком 
+          br
+          |и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__right-content
+        -
+          var skills= [
+            ['Frontend', [['HTML5', 30], ['CSS3',50], ['JavaScript', 50]]],
+            ['Backend', [['PHP', 30], ['mySQL',50], ['node.js', 50],['Mongo.db', 50]]],
+            ['Workflow', [['Git', 30], ['Gulp',50], ['Bower', 50]]]
+          ]
+        ul.skills-list
+          each skillsrow in skills
+            li.skills-list__item.skills-row
+              .skills-row__title #{skillsrow[0]}
+              ul.skills-row__list
+                each skill in skillsrow[1]
+                  li.skills-row__item
+                    figure.skill(data-percents="70")
+                      svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                      .skill__title #{skill[0]}
+  section.map
+    .google-map
+    .map__data
+      .contacts
+        .contacts__title
+          .block-subtitle Контакты
+        .contacts__data
+          ul.contacts__list
+            li.contacts__item
+              svg.contacts__icon
+                use(xlink:href='assets/images/icons/sprite.svg#skype')
+              .contacts__text vitalthebest
+            li.contacts__item
+              svg.contacts__icon
+                use(xlink:href='assets/images/icons/sprite.svg#envelope')
+              .contacts__text vitaly.grigorev@outlook.com
+            li.contacts__item
+              svg.contacts__icon
+                use(xlink:href='assets/images/icons/sprite.svg#phone')
+              .contacts__text +375 (29) 161 50 80
+            li.contacts__item
+              svg.contacts__icon
+                use(xlink:href='assets/images/icons/sprite.svg#map_marker')
+              .contacts__text г. Минск пр. Газеты Правды 46/54

@@ -7,7 +7,7 @@
   background: url(./assets/images/backgrounds/mountains-bg.png);
   @include cover;
 }
-.hdr_welcome {
+.hdr-welcome {
   display: flex;
   height: 70px;
   width: 100%;
@@ -28,7 +28,7 @@
     background: #fff;
   }
 }
-.welcome_sec {
+.welcome-sec {
   height: 100%;
   width: 100%;
   display: flex;
@@ -43,7 +43,7 @@
   border-radius: 6px;
   opacity: .8;
 }
-.infoContent {
+.userContent {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,11 +65,12 @@
     text-align: center;
   }
 }
-
+.welcome-sec__links {
+  padding-top: 40px;
+}
 .social {
   display: flex;
   justify-content: center;
-  padding-top: 40px;
   &__item {
     padding-left: 30px;
     &:first-child {
@@ -84,7 +85,7 @@
     width: 30px;
     fill: #70d2c6;
   &:hover {
-    fill: #00bfa5;
+    fill:#00bfa5;
   }
 }
 }
@@ -121,4 +122,17 @@
   text-align: center;
   line-height: 44px;
   }
+}
+.footer-welcome {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #fff;
+        font-size: 16px;
+    }
 }
