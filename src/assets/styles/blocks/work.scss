@@ -229,6 +229,7 @@
     border-radius: 6px;
     border: none;
     margin-top: 24px;
+    z-index: 1;
 }
 .textarea-form {
     height: 140px;
@@ -236,6 +237,7 @@
     margin-top: 20px;
     border-radius: 6px;
     border: none;
+    z-index: 1;
 }
 .blur {
     height: 100%;
@@ -258,4 +260,16 @@
 }
 .btn-form-border {
     border-right: 1px solid #82cfc9;
+}
+input {
+    @include placeholder {
+        color: #373e42;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+textarea {
+    @include placeholder {
+        color: #373e42;
+        font-family: 'Roboto', sans-serif;
+    }
 }

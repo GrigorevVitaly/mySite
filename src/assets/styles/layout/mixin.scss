@@ -3,3 +3,9 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
+}
