@@ -60,29 +60,37 @@ block content
         .slide-third
             img(src='assets/images/slides/down.png').slide-third__img
     section.rewiews
-        .rewiews__title.block-subtitle что обо мне говорят
+        .block-subtitle.rewiews__title что обо мне говорят
+            .about-bg.about-bg--rewiews
+                svg.about-bg__pic.about-bg__pic--rewiews
+                    use(xlink:href='assets/images/icons/sprite.svg#about_header')
         .rewiews__content
             .rewiews-info
+                .rewiews-info__quotes "
                 .rewiews-info__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                img(src='assets/images/icons/as.png').rewiews-info__icon
-                img(src='assets/images/photos/dmirtry.png').rewiews-info__img
-                .rewiews-info__title Ковальчук Дмитрий
-                .rewiews-info__position основатель Loftschool
+                .rewiews-info__content
+                    img(src='assets/images/photos/dmirtry.png').rewiews-info__img
+                    .rewiews-info__names
+                        .rewiews-info__title Ковальчук Дмитрий
+                        .rewiews-info__position основатель Loftschool
             .rewiews-info
+                .rewiews-info__quotes "
                 .rewiews-info__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
-                img(src='assets/images/icons/as.png').rewiews-info__icon
-                img(src='assets/images/photos/vladimir.png').rewiews-info__img
-                .rewiews-info__title Сабанцев Владимир
-                .rewiews-info__position преподаватель
-            form.form-work 
-                .form-work__title.block-subtitle Связаться со мной
-                .form-work__input
-                    input(.input-form type='text' placeholder='Имя')
-                    input(.input-form type='text' placeholder='Email')  
-                    textarea(name="textarea", cols="10", rows="8" type='text' placeholder='Ваше сообщение') 
-                .form-work__btns
-                    button.btn.btn-form Отправить
-                    button.btn.btn-form Очистить  
+                .rewiews-info__content
+                    img(src='assets/images/photos/vladimir.png').rewiews-info__img
+                    .rewiews-info__names
+                        .rewiews-info__title Сабанцев Владимир
+                        .rewiews-info__position преподаватель
+        form.form-work 
+            .blur
+            .form-work__title.block-subtitle Связаться со мной
+            .form-work__input
+                input(.input-form type='text' placeholder='Имя')
+                input(.input-form type='text' placeholder='Email')  
+                textarea(name="textarea", cols="10", rows="8" type='text' placeholder='Ваше сообщение') 
+            .form-work__btns
+                button.btn.btn-form Отправить
+                button.btn.btn-form Очистить  
         .rewiews__up-btn
             a(href="#").down-btn
                 svg.down-btn__icon

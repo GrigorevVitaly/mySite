@@ -124,3 +124,69 @@
         color: #fff;
     }
 }
+.rewiews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 185vh;
+    background: url(./assets/images/backgrounds/bg-about-say.png);
+    @include cover;
+    &__content {
+        display: flex;
+        justify-content: center;
+        padding-top: 55px;
+    }
+}
+.rewiews__title {
+    height: 200px;
+    width: 300px;
+    font-family: 'bernier';
+    font-size: 63px;
+    color: #373e42;
+    padding-top: 40px;
+    &:before {
+        left: 305px;
+        top: 41%;
+    }
+    &::after {
+        right: 305px;
+        top: 41%;
+    }
+}
+.about-bg__pic--rewiews {
+    height: 190px;
+    width: 500px;
+    margin: 0 0 0 -90px;
+}
+.about-bg--rewiews {
+    top: 0;
+}
+.rewiews-info {
+    width: 33%;
+    &__content {
+        display: flex;
+        padding-top: 29px;
+    }
+    &__title {
+        padding: 10px 0 0 28px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: #20b5a1;
+    }
+    &__position {
+        padding: 3px 0 0 27px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #20b5a1;
+    }
+}
+.rewiews-info__quotes {
+    font-family: 'Awesome', sans-serif;
+    font-size: 36px;
+    color: #dde0e0;
+}
+.form-work {
+    height: 440px;
+    width: 380px;
+}
