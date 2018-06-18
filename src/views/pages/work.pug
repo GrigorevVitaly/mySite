@@ -85,16 +85,16 @@ block content
             .blur
             .form-work__title.block-subtitle Связаться со мной
             .form-work__input
-                input(.input-form type='text' placeholder='Имя')
-                input(.input-form type='text' placeholder='Email')  
-                textarea(name="textarea", cols="10", rows="8" type='text' placeholder='Ваше сообщение') 
+                input(type='text' placeholder='Имя').input-form
+                input(type='text' placeholder='Email').input-form
+                textarea.textarea-form(name="textarea", cols="10", rows="8" type='text' placeholder='Ваше сообщение')
             .form-work__btns
-                button.btn.btn-form Отправить
+                button.btn.btn-form.btn-form-border Отправить
                 button.btn.btn-form Очистить  
         .rewiews__up-btn
             a(href="#").down-btn
                 svg.down-btn__icon
-                    use(xlink:href='assets/images/icons/sprite.svg#portf_arrow_down')
+                    use(xlink:href='assets/images/icons/sprite.svg#portf_arrow_up')
 
 
 
