@@ -24,6 +24,9 @@ block content
       a(href="#").hamburger
         svg.hamburger__icon
           use(xlink:href='assets/images/icons/sprite.svg#hamburger')
+    .hero__bg
+      svg.bg-pic
+        use(xlink:href='assets/images/icons/sprite.svg#portfolio_header')
     .hero__title
       .userContent
             .userContent__img
@@ -34,13 +37,17 @@ block content
       a(href="#").down-btn
         svg.down-btn__icon
           use(xlink:href='assets/images/icons/sprite.svg#portf_arrow_down')
+    .hero__triangle
+      svg(viewBox='0 0 1000 110' preserveAspectRatio='none').triangle-icon
+        polygon(points='500,110 1000,0 1000,110' class="triangle-icon__beige")
+        polygon(points='0,0 0,110 500,110' class="triangle-icon__lightbeige")
   section.about 
     .about__left
-      .about__triangle
-            
-
-      .about__let-title
-        .about-title Обо мне
+      .about__left-title
+        .block-subtitle.block-subtitle--about Обо мне
+        .about-bg
+          svg.about-bg__pic
+            use(xlink:href='assets/images/icons/sprite.svg#about_header')
       .about__left-content
         .user-info
           .user-info__img
@@ -64,7 +71,7 @@ block content
     .about__right
       .about__triangle
       .about__right-title
-        .block-subtitle Чем я могу быть
+        .block-subtitle.block-subtitle--right Чем я могу быть
           br
           | вам полезен
       .about__right_description.text-content

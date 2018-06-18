@@ -1,0 +1,93 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+    section.hero-work
+        .hero__links
+            .social
+                    ul.social__list
+                        li.social__item
+                            a(href="https://vk.com/itrueman").social__link
+                                +icon('vk', 'social__icon--white')
+                        li.social__item
+                            a(href="https://github.com/GrigorevVitaly").social__link
+                                +icon('github', 'social__icon--white')
+                        li.social__item
+                            a(href="https://www.linkedin.com/in/vitaly-grigorev-2563b7164/").social__link
+                                +icon('in', 'social__icon--white')
+        .hero__menu
+            a(href="#").hamburger
+                svg.hamburger__icon
+                    use(xlink:href='assets/images/icons/sprite.svg#hamburger')
+        .hero__bg
+            svg.bg-pic
+                use(xlink:href='assets/images/icons/sprite.svg#portfolio_header')
+        .hero__title
+        .userContent.userContent--work
+                .userContent__img
+                    img(src="./assets/images/photos/man.png", alt="photo")
+                .userContent__title--white Виталий Григорьев
+                .userContent__text--white Личный сайт веб разработчика
+        .hero__down-btn.hero__down-btn--work
+            a(href="#").down-btn
+                svg.down-btn__icon
+                    use(xlink:href='assets/images/icons/sprite.svg#portf_arrow_down')
+        .hero__triangle.hero__triangle--work
+            svg(viewBox='0 0 1000 110' preserveAspectRatio='none').triangle-icon
+                polygon(points='500,110 1000,0 1000,110' class="triangle-icon--work")
+                polygon(points='0,0 0,110 500,110' class="triangle-icon--work")
+        .hero-work__work
+            .block-subtitle.block-subtitle__work мои работы
+            .about-bg
+                svg.about-bg__pic.about-bg__pic--work
+                    use(xlink:href='assets/images/icons/sprite.svg#works_header')
+    section.work
+        .slider-info
+            .block-subtitle.block-subtitle__slide сайт школы онлайн образования
+            .web-components HTML , CSS, JAVASCRIPT
+            button.btn.btn-work Посмотреть сайт
+                svg.btn-work__icon
+                    use(xlink:href='assets/images/icons/sprite.svg#link')  
+        .slide-first
+            img(src='assets/images/slides/big_work.png').slide-first__img
+        .slide-second
+            img(src='assets/images/slides/down.png').slide-second__img
+        .slide-third
+            img(src='assets/images/slides/down.png').slide-third__img
+    section.rewiews
+        .rewiews__title.block-subtitle что обо мне говорят
+        .rewiews__content
+            .rewiews-info
+                .rewiews-info__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                img(src='assets/images/icons/as.png').rewiews-info__icon
+                img(src='assets/images/photos/dmirtry.png').rewiews-info__img
+                .rewiews-info__title Ковальчук Дмитрий
+                .rewiews-info__position основатель Loftschool
+            .rewiews-info
+                .rewiews-info__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+                img(src='assets/images/icons/as.png').rewiews-info__icon
+                img(src='assets/images/photos/vladimir.png').rewiews-info__img
+                .rewiews-info__title Сабанцев Владимир
+                .rewiews-info__position преподаватель
+            form.form-work 
+                .form-work__title.block-subtitle Связаться со мной
+                .form-work__input
+                    input(.input-form type='text' placeholder='Имя')
+                    input(.input-form type='text' placeholder='Email')  
+                    textarea(name="textarea", cols="10", rows="8" type='text' placeholder='Ваше сообщение') 
+                .form-work__btns
+                    button.btn.btn-form Отправить
+                    button.btn.btn-form Очистить  
+        .rewiews__up-btn
+            a(href="#").down-btn
+                svg.down-btn__icon
+                    use(xlink:href='assets/images/icons/sprite.svg#portf_arrow_down')
+
+
+
+        

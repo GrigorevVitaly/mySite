@@ -6,8 +6,67 @@
     background: url(./assets/images/backgrounds/about-bg.png);
     @include cover;
     height: 100vh;
+    &__title {
+      margin-top: -210px;
+    }
+    &__menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 26px 33px 0 0;
+    }
+    &__links {
+      width: 150px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 30px 0 0 30px;
+    }
+    &__down-btn {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      bottom: 165px;
+    }
+    &__bg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+    &__triangle {
+      position: absolute;
+      bottom: 95px;
+      width: 100%;
+    }
 }
-
+.triangle-icon {
+  &__beige {
+    fill: #eeebdf;
+  }
+  &__lightbeige {
+    fill: #efeee9;
+  }
+}
+.bg-pic {
+  height: 100%;
+  width: 100%;
+  fill: #fff;
+  opacity: .06;
+  
+}
+.about-bg {
+  position: absolute;
+  height: 150px;
+  width: 400px;
+  &__pic {
+    height: 100%;
+    width: 100%;
+    fill: grey;
+    opacity: .07;
+    margin: -146px 0 0 -90px;
+  }
+}
 .social{
   display: flex;
   justify-content: center;
@@ -29,20 +88,7 @@
   }
 }
 }
-.hero__links {
-  width: 150px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 30px 0 0 30px;
-}
-.hero__menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 30px 30px 0 0;
-}
+
 .hamburger {
   width: 40px;
   height: 40px;
@@ -75,12 +121,7 @@
     color: #fff;
   }
 }
-.hero__down-btn {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  bottom: 70px;
-}
+
 .down-btn {
   
   &__icon {
@@ -90,9 +131,10 @@
   }
 }
 .about {
-  height: 100vh;
+  height: 122vh;
   position: relative;
   display: flex;
+  margin-top: -101px;
   &__left {
     width: 50%;
     background-color: #efeee9;
@@ -110,13 +152,14 @@
   &__right_description {
     width: 95%;
     text-align: center;
+    padding-top: 21px;
+  }
+  &__right-content {
+    padding-top: 42px;
   }
 }
-
-.about-title {
-  font-family: 'bernier';
-  font-size: 63px;
-  color: #373e42;
+.about__left-title {
+  margin: -5px 0 0 -7px;
 }
 .user-info {
   display: flex;
@@ -124,23 +167,67 @@
   align-items: center;
   &__title {
     text-align: center;
+    padding-top: 21px;
   }
   &__text {
     width: 450px;
+    padding-top: 24px;
+  }
+  &__img {
+    padding-top: 39px;
   }
 }
 .block-subtitle {
+  position: relative;
   font-family: 'bernier';
   font-size: 35px;
   color: #455a64;
   text-align: center;
+  &:before {
+    left: 135px;
+  }
+  &::after {
+    right: 135px;
+  }
+}
+.block-subtitle:before, .block-subtitle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #c3c4c0;
+  height: 5px;
+  width: 22px;
+  transform: translateY(-50%);
+  top: 50%;
+  opacity: .7;
+}
+.block-subtitle--right {
+  &:before {
+    top: 25%;
+    left: 240px;
+  }
+  &:after {
+    top: 25%;
+    right: 240px;
+  }
+}
+.block-subtitle--about {
+  font-family: 'bernier';
+  font-size: 63px;
+  color: #373e42;
+  &:before {
+    left: 205px;
+  }
+  &:after {
+    right: 205px;
+  }
 }
 .map {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: 142vh;
   background: url(./assets/images/backgrounds/map-bg.png);
   @include cover;
   &__data {
@@ -159,15 +246,16 @@
     width: 85%;
   }
   &__title {
-    padding-top: 30px;
+    padding-top: 22px;
   }
   &__list {
     display: flex;
     flex-direction: column;
+    padding: 9px 0 0 10px;
   }
   &__item {
     display: flex;
-    padding-top: 20px;
+    padding-top: 17px;
   }
   &__icon {
     height: 25px;

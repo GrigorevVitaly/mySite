@@ -7,7 +7,7 @@ block scripts
   script(src='blog.bundle.js')
 
 block content
-    section.hero
+    section.hero-blog
         .hero__links
             .social
                 ul.social__list
@@ -24,21 +24,21 @@ block content
             a(href="#").hamburger
                 svg.hamburger__icon
                     use(xlink:href='assets/images/icons/sprite.svg#hamburger')
-        .hero__title
-            .userContent
+        .hero__title-blog
+            .userContent.userContent-blog
                     .userContent__img
                         img(src="./assets/images/photos/man.png", alt="photo")
-                    .userContent__title--white Виталий Григорьев
-                    .userContent__text--white Личный сайт веб разработчика
-        .hero__down-btn 
-            a(href="#").down-btn
-                svg.down-btn__icon
-                    use(xlink:href='assets/images/icons/sprite.svg#portf_arrow_down')
+                    .block-subtitle.block-subtitle--blog блог
+                    .blog-title Статьи, которые я написал
+        .hero__triangle-blog
+            svg(viewBox='0 0 1000 110' preserveAspectRatio='none').triangle-icon
+                polygon(points='500,110 1000,0 1000,110' class="triangle-icon")
+                polygon(points='0,0 0,110 500,110' class="triangle-icon")
     section.blog
         aside.blog__nav
             nav
                 ul.nav-blog__list
-                    li.nav-blog__item
+                    li.nav-blog__item.nav-blog__item--active
                         a.nav-blog__link Самое важное в SASS
                     li.nav-blog__item
                         a.nav-blog__link Приёмы в вёрстке, без которых не обходится ни один сайт

@@ -10,7 +10,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      padding: 20px 30px 0 0;
+      padding: 15px 30px 0 0;
     }
     &__info {
       position: absolute;
@@ -61,11 +61,11 @@
   position: absolute;
   width: 100%;
   &__list {
-    padding: 20px 0 0 10px;
+    padding: 14px 0 0 25px;
   }
   &__item {
     display: inline-flex;
-    width: 126.66px;
+    width: 100px;
     height: 45px;
   }
   &__link {
