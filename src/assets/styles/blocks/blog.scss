@@ -25,6 +25,12 @@
     font-size: 63px;
     color: #fff;
     height: 70px;
+    &:before {
+        top: 66%;
+    }
+    &:after {
+        top: 66%;
+    }
 }
 .nav-blog {
     &__link {
