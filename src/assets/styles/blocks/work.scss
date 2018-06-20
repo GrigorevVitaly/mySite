@@ -5,7 +5,8 @@
     position: relative;
     background: url(./assets/images/backgrounds/about-bg.png);
     @include cover;
-    height: 112vh;
+    height: 100vh;
+    min-height: 650px;
     &__work {
         position: absolute;
         height: 180px;
@@ -16,6 +17,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: -80px;
     }
 }
 .work {
@@ -44,6 +46,9 @@
 }
 .slide-third {
     grid-area: right;
+}
+.hero__triangle--work {
+    margin-bottom: -80px;
 }
 .block-subtitle {
     &__work {
@@ -238,6 +243,7 @@
     border-radius: 6px;
     border: none;
     z-index: 1;
+    resize: none;
 }
 .blur {
     height: 100%;
@@ -272,4 +278,7 @@ textarea {
         color: #373e42;
         font-family: 'Roboto', sans-serif;
     }
+}
+.hero__down-btn--work {
+    bottom: 166px;
 }

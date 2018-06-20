@@ -1,81 +1,169 @@
+// .footer {
+//     display: flex;
+//     background-color: #373e42;
+//     position: absolute;
+//     height: 150px;
+//     width: 100%;
+//     opacity: 0.9;
+//     margin-top: -150px;
+//     &__links {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       padding: 15px 30px 0 0;
+//     }
+//     &__info {
+//       position: absolute;
+//       height: 30%;
+//       bottom: 11%;
+//       left: 0;
+//       color: #b7b9ba;
+//       padding-left: 30px;
+//     }
+//     &__title {
+//       position: absolute;
+//       height: 30%;
+//       bottom: 3%;
+//       right: 0;
+//       color: #b7b9ba;
+//       padding-right: 30px;
+//     }
+// }
+// .social-foot {
+//   display: flex;
+//   justify-content: center;
+//   &__item {
+//     padding-left: 10px;
+//     &:first-child {
+//       padding-left: 0;
+//     }
+//   }
+//   &__list {
+//     display: flex;
+//   }
+//   &__icon {
+//     height: 40px;
+//     width: 40px;
+//     fill: #9eaaab;
+//     fill-opacity: .9;
+//     &:hover {
+//       fill: #fff;
+//   }
+// }
+// }
+// .footer__menu {
+//   height: 60px;
+//   width: 420px;
+//   top: 0;
+//   left: 0;
+// }
+// .menu-foot {
+//   position: absolute;
+//   width: 100%;
+//   &__list {
+//     padding: 14px 0 0 25px;
+//   }
+//   &__item {
+//     display: inline-flex;
+//     width: 100px;
+//     height: 45px;
+//   }
+//   &__link {
+//   height: 100%;
+//   width: 100%;
+//   text-decoration: none;
+//   color: #fff;
+//   font-family: 'Roboto', sans-serif;
+//   font-weight: 500;
+//   text-align: center;
+//   line-height: 44px;
+//   }
+// }
 .footer {
+  display: grid;
+  grid-template-areas: 
+  'left-up right-up'
+  'left-bot right-bot';
+  background-color: #373e42;
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  opacity: 0.9;
+  margin-top: -150px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 75px 75px;
+  &__menu {
+    grid-area: left-up;
+    border-bottom: 1px solid #44565b;
+  }
+  &__links {
+    grid-area: right-up;
+    border-bottom: 1px solid #44565b;
+  }
+  &__info {
+    grid-area: left-bot;
     display: flex;
-    background-color: #373e42;
-    position: absolute;
-    height: 150px;
-    width: 100%;
-    opacity: 0.9;
-    margin-top: -150px;
-    &__links {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 15px 30px 0 0;
-    }
-    &__info {
-      position: absolute;
-      height: 30%;
-      bottom: 11%;
-      left: 0;
-      color: #b7b9ba;
-      padding-left: 30px;
-    }
-    &__title {
-      position: absolute;
-      height: 30%;
-      bottom: 3%;
-      right: 0;
-      color: #b7b9ba;
-      padding-right: 30px;
-    }
+    align-items: center;
+  }
+  &__title {
+    grid-area: right-bot;
+    display: flex;
+    align-items: center;
+  }
 }
-.social-foot {
-  display: flex;
-  justify-content: center;
+.menu-foot {
+  &__list {
+    display: flex;
+    padding: 25px 0 0 30px;
+  }
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
   &__item {
-    padding-left: 10px;
+    padding-left: 40px;
     &:first-child {
       padding-left: 0;
     }
   }
+}
+.social-foot {
+  width: 100%;
+  height: 100%;
   &__list {
     display: flex;
+    position: absolute;
+    top: 20px;
+    right: 30px;
   }
   &__icon {
-    height: 40px;
-    width: 40px;
-    fill: #9eaaab;
-    fill-opacity: .9;
+    height: 35px;
+    width: 35px;
+    background-color: #97a2a3;
+    border: 1px solid #97a2a3;
+    border-radius: 50%;
+    fill: #373e42;
     &:hover {
+      background-color: #373e42;
+      border: 1px solid #373e42;
       fill: #fff;
-  }
-}
-}
-.footer__menu {
-  height: 60px;
-  width: 420px;
-  top: 0;
-  left: 0;
-}
-.menu-foot {
-  position: absolute;
-  width: 100%;
-  &__list {
-    padding: 14px 0 0 25px;
+    }
   }
   &__item {
-    display: inline-flex;
-    width: 100px;
-    height: 45px;
+    padding-left: 10px;
   }
-  &__link {
-  height: 100%;
-  width: 100%;
-  text-decoration: none;
-  color: #fff;
+}
+.footer__info-text {
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  text-align: center;
-  line-height: 44px;
-  }
+  font-weight: 400;
+  color: #a6abac;
+  padding-left: 30px;
+}
+.footer-title-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #a6abac;
+  text-align: right;
+  width: 100%;
+  padding-right: 30px;
 }

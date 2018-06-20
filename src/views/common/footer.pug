@@ -3,7 +3,7 @@ footer.footer
     nav.menu-foot
       ul.menu-foot__list
         li.menu-foot__item
-          a.menu-foot__link Мои работы 
+          a(href="./work.html").menu-foot__link Мои работы 
         li.menu-foot__item 
           a(href="./about.html").menu-foot__link Обо мне
         li.menu-foot__item 
@@ -22,7 +22,9 @@ footer.footer
         li.social-foot__item
           a(href="https://www.linkedin.com/in/vitaly-grigorev-2563b7164/").social-foot__link
             +icon('in_round', 'social-foot__icon')
-  .footer__info Я веб-разработчик из Минска, и этот сайт я сделал в рамках
-    br
-    | обучения в Школе онлайн образования LoftSchool. 
-  .footer__title &copy; Виталий Григорьев | Создано с любовью в LoftSchool | 2018
+  .footer__info 
+    .footer__info-text Я веб-разработчик из Минска, и этот сайт я сделал в рамках
+      br
+      | обучения в Школе онлайн образования LoftSchool. 
+  .footer__title 
+    .footer-title-text &copy; Виталий Григорьев | Создано с любовью в LoftSchool | 2018
