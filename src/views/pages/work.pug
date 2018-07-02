@@ -7,7 +7,9 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-    section.hero-work
+    section.hero.hero-work
+        .hero-bg
+            img.hero-bg__img(src='./assets/images/backgrounds/about-bg.png')
         .hero__links
             .social
                     ul.social__list
@@ -28,7 +30,7 @@ block content
             svg.bg-pic
                 use(xlink:href='assets/images/icons/sprite.svg#portfolio_header')
         .hero__title
-        .userContent.userContent--work
+            .userContent.userContent--work
                 .userContent__img
                     img(src="./assets/images/photos/man.png", alt="photo")
                 .userContent__title--white Виталий Григорьев

@@ -10,6 +10,8 @@
         font-family: 'Roboto', sans-serif;
         font-size: 12.82px;
         color: #00bfa5;
+        width: 50px;
+        text-align: center;
     }
     &__figure {
     position: absolute;
@@ -29,24 +31,95 @@
 .skill__circle_above {
     stroke: $green;
     stroke-dasharray: 251;
-    stroke-dashoffset: 50;
+    stroke-dashoffset: 251;
+    transition: stroke-dashoffset 1s;
+}
+.skills {
+    display: flex;
+    @include desktop {
+        flex-wrap: wrap
+    }
+    @include laptop {
+        margin: auto;
+        flex-wrap: wrap;
+        width: 460px;
+    }
+    @include tablets {
+        justify-content: center;
+    }
+    @include phone {
+        margin: auto;
+        flex-wrap: wrap;
+        width: 440px;
+        margin-left: -107px;
+    }
+    @include iphone {
+        margin: auto;
+        flex-wrap: wrap;
+        width: 440px;
+        margin-left: -107px;
+    }
 }
 .skills-list {
-    display: flex;
-    flex-direction: column;
-}
-.skills-row {
-    &__list {
-    display: flex;
+    @include tablets {
+        padding-bottom: 30px;
     }
     &__title {
         font-family: 'Roboto', sans-serif;
         font-size: 28px;
         color: #455a64;
         padding-left: 50px;
+        @include tablets {
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+    &__item {
+        padding-top: 20px;
+        padding-left: 38px;
+    }
+}
+/* .skills-list {
+    display: flex;
+    flex-direction: column;
+} */
+/* .skills-row {
+    &__list {
+        display: flex;
+        @include laptop {
+            margin: auto;
+            flex-wrap: wrap;
+            width: 460px;
+        }
+        @include tablets {
+            justify-content: center;
+        }
+        @include phone {
+            margin: auto;
+            flex-wrap: wrap;
+            width: 460px;
+        }
+        @include iphone {
+            margin: auto;
+            flex-wrap: wrap;
+            width: 460px;
+        }
+    }
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 28px;
+        color: #455a64;
+        padding-left: 50px;
+        @include tablets {
+            padding-left: 0;
+            text-align: center;
+        }
     }
     &__item {
         width: 157px;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-}
+} */

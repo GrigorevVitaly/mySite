@@ -4,15 +4,54 @@
   align-items: center;
   height: 100vh;
   width: 95% auto;
-  background: url(./assets/images/backgrounds/mountains-bg.png);
-  @include cover;
+  min-height: 650px;
+  position: relative;
+  @include laptop {
+    background: url(./assets/images/backgrounds/mountains-bg.png);
+    @include cover;
+  }
 }
+.welcome-parallax {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 100px;
+  @include laptop {
+    display: none;
+  }
+  &__layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__img {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 160%;
+    height: 100%;
+  }
+}
+
 .hdr-welcome {
   display: flex;
   position: absolute;
   height: 70px;
   width: 100%;
   justify-content: flex-end;
+  z-index: 1;
+  right: 20px;
+  @include phone {
+    justify-content: center;
+  }
 }
 .btn {
   height: 45px;
@@ -24,12 +63,16 @@
   color: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  @include phone {
+   margin-right: 0;
+  }
   &:hover {
     color: #00bfa5;
     background: #fff;
   }
 }
 .welcome-sec {
+  position: absolute;
   height: 100%;
   width: 100%;
   display: flex;
@@ -43,13 +86,25 @@
   background-color: #fff;
   border-radius: 6px;
   opacity: .8;
+  @include phone {
+    width: 90%;
+  }
 }
 .userContent {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include tablets {
+    padding-top: 36px;
+  }
   &__img {
     padding-top: 40px;
+    @include tablets {
+      padding-top: 0px;
+    }
+    @include phone {
+      padding-top: 12px;
+    }
   }
   &__title {
     font-family: 'Roboto', sans-serif;
@@ -57,6 +112,9 @@
     font-size: 28px;
     color: #455a64;
     text-align: center;
+    @include tablets {
+      padding-top: 14px;
+    }
   }
   &__text {
     font-family: 'Roboto', sans-serif;
@@ -139,4 +197,9 @@
         color: #fff;
         font-size: 16px;
     }
+}
+.menu__item {
+  @include phone {
+    width: 33.333%;
+  }
 }

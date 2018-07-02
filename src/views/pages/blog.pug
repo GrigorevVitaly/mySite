@@ -7,7 +7,9 @@ block scripts
   script(src='blog.bundle.js')
 
 block content
-    section.hero-blog
+    section.hero.hero-blog
+        .hero-bg
+            img.hero-bg__img(src='./assets/images/backgrounds/about-bg.png')
         .hero__links
             .social
                 ul.social__list
@@ -24,13 +26,16 @@ block content
             a(href="#").hamburger
                 svg.hamburger__icon
                     use(xlink:href='assets/images/icons/sprite.svg#hamburger')
-        .hero__title-blog
+        .hero__bg
+            svg.bg-pic
+                use(xlink:href='assets/images/icons/sprite.svg#portfolio_header')
+        .hero__title.hero__title-blog
             .userContent.userContent-blog
                     .userContent__img
                         img(src="./assets/images/photos/man.png", alt="photo")
                     .block-subtitle.block-subtitle--blog блог
                     .blog-title Статьи, которые я написал
-        .hero__triangle-blog
+        .hero__triangle.hero__triangle-blog
             svg(viewBox='0 0 1000 110' preserveAspectRatio='none').triangle-icon
                 polygon(points='500,110 1000,0 1000,110' class="triangle-icon")
                 polygon(points='0,0 0,110 500,110' class="triangle-icon")

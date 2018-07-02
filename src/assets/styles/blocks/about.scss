@@ -3,17 +3,35 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background: url(./assets/images/backgrounds/about-bg.png);
-    @include cover;
     height: 100vh;
+    min-height: 650px;
+    @include laptop {
+        background: url(./assets/images/backgrounds/about-bg.png);
+        @include cover;
+    }
+    @include tablets {
+      height: auto;
+      min-height: 650px;
+    }
+    @include phone {
+      height: auto;
+      min-height: 650px;
+    }
     &__title {
-      margin-top: -210px;
+      z-index: 1;
+      position: absolute;
     }
     &__menu {
       position: absolute;
       top: 0;
       right: 0;
       padding: 26px 33px 0 0;
+      @include tablets {
+        padding: 26px 21px 0 0;
+      }
+      @include phone {
+        padding: 10px 6px 0 0;
+      }
     }
     &__links {
       width: 150px;
@@ -23,12 +41,21 @@
       left: 0;
       padding: 30px 0 0 30px;
       z-index: 1;
+      @include tablets {
+        padding: 31px 0 0 10px;
+      }
+      @include phone {
+        padding: 11px 0 0 0;
+      }
     }
     &__down-btn {
       position: absolute;
       height: 30px;
       width: 30px;
       bottom: 165px;
+      @include tablets {
+        bottom: 146px;
+      }
     }
     &__bg {
       position: absolute;
@@ -37,13 +64,30 @@
     }
     &__triangle {
       position: absolute;
-      bottom: 95px;
+      bottom: -6px;
       width: 100%;
+    }
+}
+.hero-bg {
+  height: 100%;
+  width: 100%;
+  @include laptop {
+    display: none;
+  }
+  &__img {
+    position: relative;
+    max-width: 180%;
+    min-width: 100%;
+    top: 0;
+    min-height: 115%;
     }
 }
 .triangle-icon {
   &__beige {
     fill: #eeebdf;
+    @include tablets {
+      fill: #efeee9;
+    }
   }
   &__lightbeige {
     fill: #efeee9;
@@ -60,6 +104,10 @@
   position: absolute;
   height: 150px;
   width: 400px;
+  @include phone {
+    height: 88px;
+    width: 278px;
+  }
   &__pic {
     height: 100%;
     width: 100%;
@@ -79,11 +127,18 @@
   }
   &__list {
     display: flex;
+    @include phone {
+      margin-left: -32px;
+    }
   }
   &__icon--white {
     height: 22px;
     width: 30px;
     fill: #c1d5d5;
+    @include phone {
+      height: 20px;
+      width: 20px;
+    }
   &:hover {
     fill: #fff;
   }
@@ -97,6 +152,9 @@
   &__icon {
     height: 40px;
     width: 40px;
+    @include phone {
+      height: 23px;
+    }
   }
 }
 .userContent {
@@ -113,6 +171,13 @@
     color: #fff;
     text-align: center;
     padding-top: 10px;
+    @include tablets {
+      font-size: 35px;
+      padding-top: 17px;
+    }
+    @include phone {
+      font-size: 21px;
+    }
   }
   &__text--white {
     font-family: 'Roboto', sans-serif;
@@ -124,7 +189,6 @@
 }
 
 .down-btn {
-  
   &__icon {
     height: 30px;
     width: 30px;
@@ -135,13 +199,26 @@
   height: 122vh;
   position: relative;
   display: flex;
-  margin-top: -101px;
+  @include tablets {
+    flex-direction: column;
+    height: auto;
+  }
+  @include phone {
+    height: auto;
+  }
   &__left {
     width: 50%;
     background-color: #efeee9;
     display: flex;
     align-items: center;
     flex-direction: column;
+    @include tablets {
+      width: 100%;
+      height: auto;
+    }
+    @include phone {
+      height: auto;
+    }
   }
   &__right {
     display: flex;
@@ -149,18 +226,42 @@
     align-items: center;
     width: 50%;
     background-color: #eeebdf;
+    @include tablets {
+      width: 100%;
+      height: auto;
+    }
+    @include phone {
+      height: auto;
+    }
   }
   &__right_description {
     width: 95%;
     text-align: center;
     padding-top: 21px;
+    @include tablets {
+      padding-top: 3px;
+    }
   }
   &__right-content {
     padding-top: 42px;
+    height: 100%;
+    width: 100%;
+  }
+  &__right-title {
+    padding-top: 35px;
+    @include phone {
+      padding-top: 14px;
+    }
   }
 }
 .about__left-title {
   margin: -5px 0 0 -7px;
+  @include tablets {
+    margin: 32px 0 0 -7px;
+  }
+  @include phone {
+    margin: 25px 0 0 1px;
+  }
 }
 .user-info {
   display: flex;
@@ -169,13 +270,35 @@
   &__title {
     text-align: center;
     padding-top: 21px;
+    @include tablets {
+      padding-top: 54px;
+    }
+    @include phone {
+      padding-top: 20px;
+    }
   }
   &__text {
     width: 450px;
     padding-top: 24px;
+    @include tablets {
+      width: 471px;
+      padding-top: 6px;
+    }
+    @include phone {
+      width: 263px;
+    }
   }
   &__img {
     padding-top: 39px;
+    @include phone {
+      padding-top: 21px;
+    }
+  }
+  &__avatar {
+    @include phone {
+      height: 285px;
+      width: 100%;
+    }
   }
 }
 .block-subtitle {
@@ -184,6 +307,9 @@
   font-size: 35px;
   color: #455a64;
   text-align: center;
+  @include phone {
+    font-size: 21px;
+  }
   &:before {
     left: 135px;
   }
@@ -206,21 +332,53 @@
   &:before {
     top: 25%;
     left: 240px;
+    @include tablets {
+      left: 210px;
+      top: 49%;
+    }
+    @include phone {
+      left: 150px;
+    }
   }
   &:after {
     top: 25%;
     right: 240px;
+    @include tablets {
+      right: 210px;
+      top: 49%;
+    }
+    @include phone {
+      right: 150px;
+    }
   }
 }
 .block-subtitle--about {
   font-family: 'bernier';
   font-size: 63px;
   color: #373e42;
+  @include tablets {
+    font-size: 54px;
+  }
+  @include phone {
+    font-size: 35px;
+  }
   &:before {
     left: 205px;
+    @include tablets {
+      left: 165px;
+    }
+    @include phone {
+      left: 128px;
+    }
   }
   &:after {
     right: 205px;
+    @include tablets {
+      right: 165px;
+    }
+    @include phone {
+      right: 128px;
+    }
   }
 }
 .map {
@@ -231,12 +389,24 @@
   height: 142vh;
   background: url(./assets/images/backgrounds/map-bg.png);
   @include cover;
+  @include tablets {
+    height: auto;
+    min-height: 650px;
+  }
+  @include phone {
+    height: auto;
+    min-height: 650px;
+  }
   &__data {
     height: 290px;
     width: 380px;
     background-color: #fcfcfc;
     border-radius: 6px;
     opacity: .9;
+    margin-top: -229px;
+    @include phone {
+      opacity: 1;
+    }
   }
 }
 .contacts {
@@ -268,5 +438,17 @@
     font-size: 16px;
     color: #455a64;
     padding-left: 10px;
+  }
+}
+.block-subtitle--who {
+  &:before {
+    @include phone {
+      left: 179px;
+    }
+  }
+  &:after {
+    @include phone {
+      right: 179px;
+    }
   }
 }

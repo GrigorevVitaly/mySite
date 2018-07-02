@@ -1,84 +1,3 @@
-// .footer {
-//     display: flex;
-//     background-color: #373e42;
-//     position: absolute;
-//     height: 150px;
-//     width: 100%;
-//     opacity: 0.9;
-//     margin-top: -150px;
-//     &__links {
-//       position: absolute;
-//       top: 0;
-//       right: 0;
-//       padding: 15px 30px 0 0;
-//     }
-//     &__info {
-//       position: absolute;
-//       height: 30%;
-//       bottom: 11%;
-//       left: 0;
-//       color: #b7b9ba;
-//       padding-left: 30px;
-//     }
-//     &__title {
-//       position: absolute;
-//       height: 30%;
-//       bottom: 3%;
-//       right: 0;
-//       color: #b7b9ba;
-//       padding-right: 30px;
-//     }
-// }
-// .social-foot {
-//   display: flex;
-//   justify-content: center;
-//   &__item {
-//     padding-left: 10px;
-//     &:first-child {
-//       padding-left: 0;
-//     }
-//   }
-//   &__list {
-//     display: flex;
-//   }
-//   &__icon {
-//     height: 40px;
-//     width: 40px;
-//     fill: #9eaaab;
-//     fill-opacity: .9;
-//     &:hover {
-//       fill: #fff;
-//   }
-// }
-// }
-// .footer__menu {
-//   height: 60px;
-//   width: 420px;
-//   top: 0;
-//   left: 0;
-// }
-// .menu-foot {
-//   position: absolute;
-//   width: 100%;
-//   &__list {
-//     padding: 14px 0 0 25px;
-//   }
-//   &__item {
-//     display: inline-flex;
-//     width: 100px;
-//     height: 45px;
-//   }
-//   &__link {
-//   height: 100%;
-//   width: 100%;
-//   text-decoration: none;
-//   color: #fff;
-//   font-family: 'Roboto', sans-serif;
-//   font-weight: 500;
-//   text-align: center;
-//   line-height: 44px;
-//   }
-// }
 .footer {
   display: grid;
   grid-template-areas: 
@@ -92,18 +11,43 @@
   margin-top: -150px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 75px 75px;
+  @include tablets {
+    height: 213px;
+    margin-top: -213px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__menu {
     grid-area: left-up;
     border-bottom: 1px solid #44565b;
+    @include tablets {
+      border: none;
+    }
   }
   &__links {
     grid-area: right-up;
     border-bottom: 1px solid #44565b;
+    @include tablets {
+      border: none;
+      padding: 18px 0 0 10px;
+    }
+    @include phone {
+      width: 100%;
+      padding: 18px 0 10px 0;
+      border-bottom: 1px solid #44565b;
+    }
   }
   &__info {
     grid-area: left-bot;
     display: flex;
     align-items: center;
+    @include tablets {
+      width: 78%;
+    }
+    @include phone {
+      width: 100%;
+    }
   }
   &__title {
     grid-area: right-bot;
@@ -115,13 +59,27 @@
   &__list {
     display: flex;
     padding: 25px 0 0 30px;
+    @include phone {
+      padding: 25px 0 0 0;
+    }
   }
   &__link {
     color: #fff;
     text-decoration: none;
+    @include tablets {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    @include phone {
+      font-size: 14px;
+    }
   }
   &__item {
     padding-left: 40px;
+    @include phone {
+      padding-left: 10px;
+    }
     &:first-child {
       padding-left: 0;
     }
@@ -135,6 +93,14 @@
     position: absolute;
     top: 20px;
     right: 30px;
+    @include tablets {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+    @include phone {
+      justify-content: center;
+    }
   }
   &__icon {
     height: 35px;
@@ -158,6 +124,16 @@
   font-weight: 400;
   color: #a6abac;
   padding-left: 30px;
+  @include tablets {
+    text-align: center;
+    font-size: 16px;
+    padding: 35px 0 0 0;
+
+  }
+  @include phone {
+    padding: 0;
+    font-size: 14px;
+  }
 }
 .footer-title-text {
   font-family: 'Roboto', sans-serif;
@@ -166,4 +142,11 @@
   text-align: right;
   width: 100%;
   padding-right: 30px;
+  @include tablets {
+    padding: 6px 0 0 0;
+  }
+  @include phone {
+    font-size: 14px;
+    text-align: center;
+  }
 }

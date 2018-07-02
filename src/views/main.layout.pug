@@ -11,6 +11,7 @@ html(lang="ru")
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
     link(rel="stylesheet" href="font-awesome.min.css")
+    script(src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js")
 
     
   body
@@ -20,7 +21,8 @@ html(lang="ru")
 
         include ./common/footer.pug
       
+    include ./components/entry.pug
 
-    script(src='bootloader.bundle.js')
+    script(src="bootloader.bundle.js")
     script(src='vendor.bundle.js')
     block scripts
